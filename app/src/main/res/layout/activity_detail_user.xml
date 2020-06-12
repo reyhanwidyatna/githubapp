@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailUserActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#E0E0E0">
+
+        <ImageView
+            android:id="@+id/avatarDetailIV"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/nameDetailTV"
+            android:layout_below="@id/avatarDetailIV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"/>
+
+        <TextView
+            android:id="@+id/usernameDetailTV"
+            android:layout_below="@id/nameDetailTV"
+            android:layout_centerHorizontal="true"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username"/>
+
+        <TextView
+            android:id="@+id/cTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/company_tv"
+            android:layout_marginStart="20dp"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:layout_below="@id/usernameDetailTV"
+            android:layout_marginTop="25dp"/>
+
+        <TextView
+            android:id="@+id/companyDetailTV"
+            android:layout_below="@id/usernameDetailTV"
+            android:layout_toEndOf="@id/cTV"
+            android:layout_marginStart="10dp"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/company"/>
+
+        <TextView
+            android:id="@+id/lTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:layout_below="@id/cTV"
+            android:text="@string/location_tv"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/locationDetailTV"
+            android:layout_below="@id/companyDetailTV"
+            android:layout_toEndOf="@id/lTV"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location"/>
+
+        <TextView
+            android:id="@+id/rTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:layout_below="@id/lTV"
+            android:text="@string/repository_tv"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/repositoryDetailTV"
+            android:layout_below="@id/locationDetailTV"
+            android:layout_toEndOf="@id/rTV"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:text="@string/repository"/>
+
+        <Button
+            android:id="@+id/favoriteBT"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/repositoryDetailTV"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_favorite_black_24dp"
+            android:contentDescription="@string/favoriteimage" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayoutTop">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_below="@id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</RelativeLayout>

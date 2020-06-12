@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">DicodingApp</string>
+    <string name="pengikut_2_304">Pengikut: 2.304</string>
+    <string name="mengikuti_1_580">Mengikuti: 1.580</string>
+    <string name="reyhan_widyatna_h">Reyhan Widyatna H</string>
+    <string name="todo">TODO</string>
+    <string name="name">Name</string>
+    <string name="company">Company</string>
+    <string name="location">Location</string>
+    <string name="repository">Repository</string>
+    <string name="mengikuti">Mengikuti</string>
+    <string name="pengikut">Pengikut</string>
+    <string name="username">Username</string>
+    <string name="avatar">Avatar</string>
+    <string name="search">Search</string>
+    <string name="tabFollowing">Following</string>
+    <string name="tabFollower">Followers</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="follower_avatar">Follower Avatar</string>
+    <string name="following">Following</string>
+    <string name="follower">Follower</string>
+    <string name="ganti_bahasa" translatable="false">Ganti bahasa</string>
+    <string name="company_tv" translatable="false">Company  :</string>
+    <string name="location_tv" translatable="false">Location :</string>
+    <string name="repository_tv">Repository :</string>
+    <string name="favoriteimage">favoriteImage</string>
+    <string name="favorite">Favorite</string>
+    <string name="alert">Alert</string>
+    <string name="turn_on">Turn on</string>
+    <string name="turn_off">Turn off</string>
+    <string name="setup_reminder">SETUP REMINDER</string>
+</resources>
