@@ -4,13 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.AlarmManager;
-import android.app.AlertDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -27,7 +23,6 @@ import com.example.dicodingapp.adapter.SearchAdapter;
 import com.example.dicodingapp.model.Items;
 import com.example.dicodingapp.model.Search;
 
-import java.util.Calendar;
 import java.util.List;
 
 import retrofit2.Call;
@@ -72,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
             Intent fIntent = new Intent(this, FavoriteActivity.class);
             startActivity(fIntent);
         }
+
+        if (item.getItemId() == R.id.action_favorite_withoutcp_cp){
+            Intent fIntent = new Intent(this, FavoriteWithoutCPActivity.class);
+            startActivity(fIntent);
+        }
+
 
         if (item.getItemId() == R.id.action_reminder){
             Intent rIntent = new Intent(this, ReminderActivity.class);

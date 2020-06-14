@@ -31,4 +31,5 @@
     <string name="turn_on">Turn on</string>
     <string name="turn_off">Turn off</string>
     <string name="setup_reminder">SETUP REMINDER</string>
+    <string name="reminder">Reminder</string>
 </resources>

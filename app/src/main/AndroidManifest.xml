@@ -12,6 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".FavoriteWithoutCPActivity"></activity>
+
+        <provider
+            android:name=".FavoriteProvider"
+            android:authorities="com.example.dicodingapp"
+            android:enabled="true"
+            android:exported="true" />
+
         <activity android:name=".ReminderActivity" />
         <activity android:name=".FavoriteActivity" />
         <activity android:name=".DetailUserActivity" />

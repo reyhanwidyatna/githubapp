@@ -18,12 +18,12 @@ public class FavoriteDatabase extends SQLiteOpenHelper {
     private static int DB_VERSION = 1;
     private static String DB_NAME = "githubDB";
 
-    private static String TABLE_NAME = "favorite";
-    private static String KEY_ID = "id";
-    private static String ITEM_TITLE = "title";
-    private static String ITEM_IMAGE = "image";
-    private static String FAVORITE_STATUS = "status";
-    private static final String[] COLUMNS = {KEY_ID, ITEM_TITLE, ITEM_IMAGE, FAVORITE_STATUS};
+    public static String TABLE_NAME = "favorites";
+
+    public static String KEY_ID = "id";
+    public static String ITEM_TITLE = "title";
+    public static String ITEM_IMAGE = "image";
+    public static String FAVORITE_STATUS = "status";
 
 
     private static String QUERY_CREATE_TABLE =
@@ -48,6 +48,7 @@ public class FavoriteDatabase extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
+
 
     public void addFavorite(Favorite favorite){
         SQLiteDatabase database = this.getWritableDatabase();

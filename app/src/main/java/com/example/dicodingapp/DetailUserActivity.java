@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.app.ProgressDialog;
+import android.content.ContentValues;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -113,6 +114,14 @@ public class DetailUserActivity extends AppCompatActivity {
         favoriteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ContentValues values = new ContentValues();
+                values.put(FavoriteDatabase.KEY_ID, id);
+                values.put(FavoriteDatabase.ITEM_TITLE, username);
+                values.put(FavoriteDatabase.ITEM_IMAGE, avatar);
+                values.put(FavoriteDatabase.FAVORITE_STATUS, "1");
+
+                getContentResolver().insert(FavoriteProvider.CONTENT_URI, values);
+
                 Favorite favorite = new Favorite(id, username, avatar, "1");
                 db.addFavorite(favorite);
                 Toast.makeText(DetailUserActivity.this,"Added item to favorite", Toast.LENGTH_LONG).show();

@@ -4,21 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.example.dicodingapp.adapter.FavoriteAdapter;
-import com.example.dicodingapp.db.FavoriteDatabase;
-import com.example.dicodingapp.model.Favorite;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class FavoriteActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private FavoriteDatabase db;
     private FavoriteAdapter favoriteAdapter;
-    private List<Favorite> listFavorite = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +21,9 @@ public class FavoriteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_favorite);
 
         recyclerView = findViewById(R.id.recyclerViewFavorite);
-        db = new FavoriteDatabase(this);
+        Cursor cursor = getContentResolver().query(Uri.parse("content://com.example.dicodingapp/favorites"), null, null, null, null);
 
-        listFavorite.addAll(db.allFavorites());
-
-        favoriteAdapter = new FavoriteAdapter(this, listFavorite);
-
+        favoriteAdapter = new FavoriteAdapter(this, cursor);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
